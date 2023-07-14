@@ -4,7 +4,11 @@ import re
 from dotenv import load_dotenv
 from slack_sdk import WebClient
 from emailIntegration import scrape_email
+from slackeventsapi import SlackEventAdapter
+from flask import Flask
 
+
+app = Flask(__name__)
 
 def main():
     # Load environment variables from .env file
