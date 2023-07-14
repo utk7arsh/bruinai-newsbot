@@ -66,7 +66,7 @@ def scrape_email():
                 # print(decoded_data.decode("utf-8"))
                 x = data.find("HEADLINES & LAUNCHES")
                 y = data.find("RESEARCH & INNOVATION")
-                printable_data = data[x:y-9].split('\n')
+                printable_data = data[x+20:y-9].split('\n')
                 return printable_data
 
             except Exception as error:
